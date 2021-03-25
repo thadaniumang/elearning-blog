@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* Universal Styles Starts */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(180deg, #ffffff, #e9e9e9);
+}
+
+header{
+    position: relative;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+header .fixed-nav{
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    z-index: 999;
+    box-shadow: 1px 2px 1px #e9e9e9;
+}
+
+header #logo h1{
+    display: inline;
+    font-family: 'Sriracha', cursive, sans-serif;
+    margin: 5px 10px;
+    font-size: x-large;
+    color: #284B63;
+    cursor: pointer;
+}
+
+header span.hamburger{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #284B63;
+    height: 25px;
+    cursor: pointer;
+}
+
+header span.hamburger:hover{
+    opacity: 0.8;
+}
+
+.navbar.hidden{
+    display: none;
+}
+
+.navbar .navlinks{
+    padding-left: 0;
+}
+
+.navbar .navlinks li{
+    padding: 1.5px 10px;
+    font-size: 1.05em;
+}
+
+.navbar .navlinks li a svg{
+    margin-bottom: -1.5px;
+    margin-right: 3px;
+    color: #353535;
+}
+
+.navbar .navlinks li a{
+    text-decoration: none;
+    color: #353535;
+    font-weight: 500;
+}
+
+.navbar .navlinks li.selected a{
+    font-weight: 800;
+}
+
+.card{
+    background-color: #fcfcfc;
+    box-shadow: 1px 6px 10px #353535;
+    border-radius: 5px;
+    flex-basis: 100%;
+    height: fit-content;
+    height: -moz-fit-content;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+}
+
+.card .card-img{
+    width: 100%;
+    height: 75%;
+}
+
+.card .card-img svg{
+    color: #ffffff;
+    background-color: #3c6e71;
+    width: 100%;
+    height: 100%;
+}
+
+.card .card-content{
+    padding: 0 10px 5px;
+}
+
+.card .card-content .card-text h2{
+    font-weight: 600;
+    font-size: large;
+    color: #284b63;
+    margin: 7px 0;
+}
+
+.card .card-content .card-text p{
+    font-style: italic;
+    font-weight: 500;
+    color: #353535;
+}
+
+.card .card-content .card-button{
+    margin: 35px 15px 0;
+    text-align: right;
+}
+
+.card .card-content .card-button a{
+    box-shadow: 1.5px 3px 6px #3c6e71;
+    padding: 7px 15px;
+    background-color: #3c6e71;
+    color: #e9e9e9;
+    text-decoration: none;
+}
+
+.card .card-content .card-button a:hover{
+    box-shadow: 0.25px 0.75px 2px #3c6e71;
+}
+
+footer{
+    border-top: 0.5px solid #284b63;
+    background-color: #3c6e71;
+    color: #ffffff;
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+    padding: 5px 0;
+    line-height: 1.7em;
+}
+
+/* Universal Styles Ends */
+
+
+/* Home Page Style Starts */
+
+#home{
+    margin: 0;
+    padding: 0;
+}
+
+#home main{
+    background-color: #f4f4f4;
+    padding-bottom: 30px;
+}
+
+#home main #landing-image img{
+    width: 100%;
+    height: auto;
+    margin-top: 7.5vh;
+}
+
+#home main #landing-image{
+    position: relative;
+}
+
+#home main #landing-image span#tagline{
+    position: absolute;
+    left: 23%;
+    bottom: 10%;
+    font-size: large;
+    color: #284B63;
+    font-weight: 600;
+    font-family: cursive;
+    padding: 10px 15px;
+    background-color: #e9e9e9;
+    box-shadow: 4px 10px 15px #353535;
+}
+
+#home .tutorials-list{
+    padding: 4vh 15vw;
+}
+
+#home div h3{
+    font-size: large;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    padding: 7px 15px;
+    background-color: #353535;
+    color: #e9e9e9;
+}
+
+#home main .testimonials{
+    margin: 7vh 7vw;
+}
+
+#home main .testimonials .reviews{
+    padding: 4vh 4vh 0;
+    background-color: #ffffff;
+    border: 1px solid #353535;
+    border-radius: 5px;
+}
+
+#home main .testimonials .reviews .feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #353535;
+    padding-top: 5vh;
+}
+
+#home main .testimonials .reviews .feedback p.text{
+    color: #3c6e71;
+    font-weight: 500;
+    font-style: italic;
+    font-size: larger;
+}
+
+#home main .testimonials .reviews .feedback:last-child{
+    border-bottom: 0;
+}
+
+#home main .reviews .feedback p.author{
+    margin-right: 15px;
+    color: #284B63;
+    font-weight: 500;
+    font-style: oblique;
+    align-self: flex-end;
+}
+
+/* Home Page Styles Ends */
+
+
+/* Testimonials Styles Starts */
+
+body#feedback-form{
+    margin: 0;
+    padding: 0;
+}
+
+#feedback-form main{
+    padding: 15vh 0;
+    margin: 0 2.5%;
+}
+
+#feedback-form .submission-text{
+    display: none;
+    text-align: center;
+    padding: 15px 35px;
+    background-color: #3c6e71;
+    color: #e9e9e9;
+    font-size: 0.85em;
+}
+
+#testimonials{
+    padding: 15px;
+    background-color: #e9e9e9;
+    box-shadow: 0 4px 6px -1px #35353535, 0 2px 4px -1px #35353535;
+}
+
+#testimonials p.instruction{
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#testimonials .asterisk{
+    color: red;
+}
+
+#testimonials .field{
+    margin: 15px 5px;
+    color: #565656;
+}
+
+#testimonials .field label{
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+#testimonials .field label:first-child{
+    padding-right: 7.5px;
+    padding-bottom: 10px;
+    font-size: 1.05em;
+    font-weight: 700;
+}
+
+#testimonials .field input, #testimonials .field textarea{
+    outline: 0;
+    border-radius: 0;
+    border: 0;
+    margin: 10px 0;
+    padding: 10px 7.5px;
+    font-size: 0.85em;
+}
+
+#testimonials .field input[type="text"], #testimonials .field input[type="email"], #testimonials .field input[type="tel"]{
+    width: 100%;
+    border-bottom: 1px solid rgb(52, 116, 211);
+}
+
+#testimonials .field textarea{
+    border: 1px solid rgb(52, 116, 211);
+    width: 100%;
+    resize: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#testimonials input.valid, #testimonials textarea.valid{
+    border-bottom: 1px solid #36cc36 !important;
+    border: 1px solid #36cc36;
+}
+
+#testimonials input.invalid, #testimonials textarea.invalid{
+    border-bottom: 1px solid #aa180d !important;
+    border: 1px solid #aa180d;
+}
+
+#testimonials input.invalid ~ p, #testimonials textarea.invalid ~ p{
+    margin: 5px 0 25px;
+    font-size: small;
+    color: #aa180d;
+    font-weight: 600;
+}
+
+#testimonials .field input::placeholder, #testimonials .field textarea::placeholder{
+    color: rgb(185, 185, 185);
+}
+
+#testimonials .field input[type="submit"]{
+    padding: 7px 10px;
+    background-color: #5680e9;
+    color: white;
+}
+
+#testimonials .field input[type="submit"]:hover{
+    background-color: white;
+    color: #5680e9;
+    cursor: pointer
+}
+
+#testimonials .rate {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding: 10 10px 10px 0;
+}
+
+#testimonials .rate:not(:checked) > input {
+    visibility: hidden;
+}
+
+#testimonials .rate:not(:checked) > label {
+    cursor: pointer;
+    font-size: 25px;
+    color: #ccc;
+}
+
+#testimonials .rate:not(:checked) > label:before {
+    content: '★';
+}
+
+#testimonials .rate > input:checked ~ label {
+    color: #ffc700;    
+}
+
+#testimonials .rate:not(:checked) > label:hover, #testimonials .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+#testimonials .rate > input:checked + label:hover, #testimonials .rate > input:checked + label:hover ~ label,
+#testimonials .rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+#testimonials input[name="rate"].invalid ~ p{
+    width: 100%;
+}
+
+/* Testimonials Styles Ends */
+
+
+/* Responsive Styles Starts */
+
+@media(min-width: 576px) {
+    #home .tutorials-list{
+        padding: 4vh 20vw;
+    }
+
+    #feedback-form main{
+        margin: 0 10%;
+    }
+}
+
+@media(min-width: 768px) {
+    body{
+        font-size: 0.95em;
+    }
+    
+    #home main #landing-image span#tagline{
+        font-size: x-large;
+        padding: 15px 25px;
+    }
+
+    header span.hamburger{
+        display: none;
+    }
+
+    .navbar.hidden, .navbar{
+        display: inline;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+    }
+
+    .navbar.hidden .navlinks li, .navbar .navlinks li{
+        display: inline;
+        padding: 15px;
+        font-size: medium;
+    }
+
+    .navbar.hidden .navlinks li a{
+        padding: 0 10px 3px;
+    }
+
+    .navbar.hidden .navlinks li.selected a, .navbar .navlinks li.selected a{
+        font-weight: 600;
+        border-bottom: 2px solid #353535;
+    }
+
+    .navbar.hidden .navlinks li a svg, .navbar .navlinks li a svg{
+        display: none;
+    }
+
+    #home main #landing-image img{
+        margin-top: 1.5vh;
+    }
+
+    #home .tutorials-list{
+        padding: 4vh 25vw;
+    }
+
+    #feedback-form main{
+        margin: 0 15%;
+    }
+}
+
+@media(min-width: 992px) {
+    body{
+        font-size: 1.05em;
+    }
+
+    #home main #landing-image span#tagline{
+        font-size: xx-large;
+        padding: 20px 30px;
+    }
+
+    .card-items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card{
+        flex-basis: 40%;
+    }
+
+    #home .tutorials-list{
+        padding: 4vh 10vw;
+    }
+
+    #feedback-form main{
+        margin: 0 22.5%;
+    }
+}
+
+@media(min-width: 1200px) {
+    #feedback-form main{
+        margin: 0 30%;
+    }
+}
+
+/* Responsive Styles Ends */
