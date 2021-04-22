@@ -7,6 +7,7 @@
 }
 
 body{
+    margin: 0;
     font-size: 0.9em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(180deg, #ffffff, #e9e9e9);
@@ -19,6 +20,7 @@ header{
 }
 
 header .fixed-nav{
+    margin: 0;
     position: fixed;
     width: 100%;
     padding: 10px;
@@ -416,6 +418,67 @@ body#feedback-form{
 
 /* Testimonials Styles Ends */
 
+
+/* Cheatsheet Styles Starts */
+
+#cheats main{
+    padding: 15vh 0;
+    margin: 0 2.5%;
+    min-height: 100vh;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #284B63;
+    background-color: #fafafa;
+}
+  
+.tab a {
+    font-weight: 600;
+    background-color: #fafafa;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #284B63;
+}
+
+.tab a:hover {
+    background-color: #f1f1f1;
+}
+  
+.content {
+    color: #353535;
+    padding: 6px 12px;
+    border: 1px solid #353535;
+    border-top: none;
+    background-color: #f4f4f4;
+}
+
+.content .tabcontent .text-center {
+    text-align: center;
+}
+
+.content .tabcontent .cheats {
+    margin: 15px;
+}
+
+.content .tabcontent .cheats dt {
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.content .tabcontent .cheats dd span {
+    font-weight: 600;
+    color: #3c6e71;
+    font-style: italic;
+    padding: 0 7.5px;
+}
+
+/* Cheatsheet Styles Ends */
 
 /* Responsive Styles Starts */
 
