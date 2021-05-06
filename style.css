@@ -8,6 +8,7 @@
 
 body{
     margin: 0;
+    padding: 0;
     font-size: 0.9em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(180deg, #ffffff, #e9e9e9);
@@ -22,6 +23,7 @@ header{
 header .fixed-nav{
     margin: 0;
     position: fixed;
+    top: 0;
     width: 100%;
     padding: 10px;
     background-color: #ffffff;
@@ -150,10 +152,14 @@ footer{
     background-color: #3c6e71;
     color: #ffffff;
     text-align: center;
-    font-size: medium;
-    font-weight: 500;
+    font-size: x-small;
+    font-weight: 400;
     padding: 5px 0;
     line-height: 1.7em;
+}
+
+div.text-center {
+    text-align: center;
 }
 
 /* Universal Styles Ends */
@@ -161,13 +167,7 @@ footer{
 
 /* Home Page Style Starts */
 
-#home{
-    margin: 0;
-    padding: 0;
-}
-
 #home main{
-    background-color: #f4f4f4;
     padding-bottom: 30px;
 }
 
@@ -252,11 +252,6 @@ main h3{
 
 
 /* Testimonials Styles Starts */
-
-body#feedback-form{
-    margin: 0;
-    padding: 0;
-}
 
 #feedback-form main{
     padding: 15vh 0;
@@ -422,7 +417,7 @@ body#feedback-form{
 /* Cheatsheet Styles Starts */
 
 #cheats main{
-    padding: 15vh 0;
+    padding: 14vh 0;
     margin: 0 2.5%;
     min-height: 100vh;
 }
@@ -437,6 +432,7 @@ body#feedback-form{
     font-weight: 600;
     background-color: #fafafa;
     float: left;
+    width: 100%;
     border: none;
     outline: none;
     cursor: pointer;
@@ -450,7 +446,7 @@ body#feedback-form{
     background-color: #f1f1f1;
 }
   
-.content {
+.cheatsheet .content {
     color: #353535;
     padding: 6px 12px;
     border: 1px solid #353535;
@@ -458,33 +454,161 @@ body#feedback-form{
     background-color: #f4f4f4;
 }
 
-.content .tabcontent .text-center {
+.cheatsheet .content .tabcontent .text-center {
     text-align: center;
 }
 
-.content .tabcontent .cheats {
-    margin: 15px;
+.cheatsheet .content .tabcontent .cheats {
+    margin: 5px;
 }
 
-.content .tabcontent .cheats dt {
+.cheatsheet .content .tabcontent .cheats dt {
     font-weight: 500;
     margin: 10px 0;
 }
 
-.content .tabcontent .cheats dd span {
+.cheatsheet .content .tabcontent .cheats dd {
+    margin-left: 25px;
+}
+
+.cheatsheet .content .tabcontent .cheats dd span {
     font-weight: 600;
     color: #3c6e71;
     font-style: italic;
-    padding: 0 7.5px;
+    padding: 0 2.5px;
 }
 
 /* Cheatsheet Styles Ends */
 
+
+/* Blogs Styles Starts */
+
+#blogs main {
+    padding: 10vh 30px 25px;
+}
+
+#blogs .blogs a {
+    text-decoration: none;
+}
+
+#blogs .blogs a .card {
+    background-color: #ffffff;
+    box-shadow: 0 6px 9px -1.5px rgb(0, 0, 0, 0.1), 0 6px 9px -1.5px rgb(0, 0, 0, 0.06);
+    margin-bottom: 50px;
+}
+
+#blogs .blogs a .card .card-image img{
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    object-fit: scale-down;
+    margin-bottom: 25px;
+}
+
+/* Blogs Styles Ends */
+
+
+/* Tutorial Page Style Starts */
+
+body#tutorials main {
+    padding: 10vh 30px 25px;
+}
+
+#tutorials .tutorial-list .card {
+    background-color: #ffffff;
+    box-shadow: 0 6px 9px -1.5px rgb(0, 0, 0, 0.1), 0 6px 9px -1.5px rgb(0, 0, 0, 0.06);
+    margin-bottom: 50px;
+}
+
+#tutorials .tutorial-list .card .card-image img{
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    margin-bottom: 15px;
+}
+
+/* Tutorial Page Style Ends */
+
+
+/* Lesson Pages Styles Starts */
+
+#dbms main, #dam main {
+    padding: 12vh 30px 25px;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+  
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+  
+#dam div.content, #dbms div.content {
+    margin-left: 200px;
+    padding: 0 10% 10vh;
+    color: #353535;
+    border: 0;
+    border-left: 0.5px solid #353535;
+}
+
+#dam div.content img, #dbms div.content img{
+    width: 30%;
+    height: auto;
+}
+
+#dam div.content p, #dbms div.content p {
+    text-indent: 25px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+    
+    div.content {
+        margin-left: 0;
+    }
+}
+  
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* Lesson Page Style Ends */
+
 /* Responsive Styles Starts */
 
 @media(min-width: 576px) {
+    footer {
+        font-size: small;
+        font-weight: 400;
+    }
+    
     #home .tutorials-list{
-        padding: 4vh 20vw;
+        padding: 4vh 20vw 25px;
     }
 
     #feedback-form #testimonials{
@@ -494,11 +618,25 @@ body#feedback-form{
     .testimonials-card {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    #blogs main, body#tutorials main{
+        padding: 14vh 7.5vw 25px;
+    }
+
+    #dbms main, #dam main {
+        padding: 14vh 0 25px;
+    }
 }
+
 
 @media(min-width: 768px) {
     body{
         font-size: 0.95em;
+    }
+
+    footer {
+        font-size: small;
+        font-weight: 500;
     }
     
     #home main #landing-image span#tagline{
@@ -547,6 +685,45 @@ body#feedback-form{
     #feedback-form #testimonials{
         margin: 0 15%;
     }
+
+    #cheats main{
+        padding: 15vh 0 25px;
+    }
+
+    .tab a {
+        width: auto;
+    }
+
+    #blogs .blogs a .card, #tutorials .tutorial-list .card {
+        display: flex;
+        padding-bottom: 0;
+        align-items: stretch;
+    }
+
+    #blogs .blogs a .card .card-image, #tutorials .tutorial-list .card .card-image {
+        min-width: 30%;
+        max-width: 30%;
+        min-height: 100%;
+        max-height: 100%;
+        border: 2px solid #353535;
+    }
+
+    #blogs .blogs a .card .card-image img, #tutorials .tutorial-list .card .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+
+    #blogs .blogs a .card .card-content, #tutorials .tutorial-list .card .card-content {
+        flex-grow: 7;
+        padding: 20px 25px;
+    }
+
+    #blogs .blogs a .card p {
+        font-size: 0.9em;
+        font-weight: 400;
+    }
 }
 
 @media(min-width: 992px) {
@@ -576,12 +753,34 @@ body#feedback-form{
     #feedback-form #testimonials{
         margin: 0 22.5%;
     }
+
+    .cheatsheet .content .tabcontent .cheats {
+        margin: 10px;
+    }
+
+    footer {
+        font-size: medium;
+        font-weight: 500;
+    }
+    
+    #blogs main, body#tutorials main {
+        padding: 15vh 10vw 25px;
+    }
+
+    #dbms main, #dam main {
+        padding: 15vh 0 15px;
+    }
 }
 
 @media(min-width: 1200px) {
     #feedback-form #testimonials{
         margin: 0 30%;
     }
+
+    .cheatsheet .content .tabcontent .cheats {
+        margin: 15px;
+    }
+    
 }
 
 /* Responsive Styles Ends */

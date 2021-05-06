@@ -5,11 +5,7 @@ const navLinks = document.querySelectorAll('.navbar .navlinks a');
 const logo = document.querySelector('#logo h1');
 
 logo.addEventListener('click', e => {
-    if (window.location.pathname.includes('pages')) {
-        window.location.href = '../index.html';
-    } else {
-        window.location.href = './index.html';
-    }
+    window.location.href = '/';
 })
 
 hamburger.addEventListener('click', () => {
